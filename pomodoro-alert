@@ -1,0 +1,8 @@
+#!/bin/bash
+
+export XDG_RUNTIME_DIR=/run/user/$(id -u)
+export XAUTHORITY=/home/ravi/.Xauthority
+
+echo 'from script' > /tmp/croni
+DISPLAY=:0 /usr/bin/notify-send "Pomodoro break!"
+
